@@ -15,7 +15,7 @@
     'version': '17.1',
     'license': 'LGPL-3',
     'author': 'K8 Team',
-    # 'website': 'https://on.net.vn',
+    'website': 'https://on.net.vn',
     'depends': ['base', 'mail', 'web'],
     'data': [
         'security/ir.model.access.csv',
