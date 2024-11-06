@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hierachy_settings,access_hierachy_settings,model_hierachy_settings,,1,1,1,1
+access_hierachy_settings_details,access_hierachy_settings_details,model_hierachy_settings_details,,1,1,1,1

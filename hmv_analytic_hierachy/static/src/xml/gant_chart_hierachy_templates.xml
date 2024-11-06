@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="hmv_analytic_hierachy.HierachyRendererView">
+        <div t-att-class="props.className">
+            <Layout className="model.useSampleModel ? 'o_view_sample_data' : ''" display="props.display">
+                <t t-set-slot="control-panel-additional-actions">
+                    <CogMenu />
+                </t>
+                <t t-set-slot="layout-buttons">
+                    <t t-call="{{ props.buttonTemplate }}" />
+                </t>
+                <t t-set-slot="layout-actions">
+                    <SearchBar t-if="searchBarToggler.state.showSearchBar" />
+                </t>
+                <t t-set-slot="control-panel-navigation-additional">
+                    <t t-component="searchBarToggler.component" t-props="searchBarToggler.props" />
+                </t>
+                <t t-component="props.Renderer" t-props="rendererProps" />
+            </Layout>
+        </div>
+    </t>
+
+    <t t-name="hmv_analytic_hierachy.HierachyView.Buttons" />
+
+    <t t-name="hmv_analytic_hierachy.HierachyRendererViewTemplates">
+        <div t-att-data-id="id"
+            t-attf-style="cursor:pointer; background: {{background}}; height:100%; width:100%; border:2px solid {{border}}; border-radius: 5px; overflow: hidden;"
+            class="d-flex flex-column justify-content-between align-items-center o_kanban_gant_chart_record" t-on-click="() => onOpenRecordHierachy(id)">
+            <div class="w-100 d-flex justify-content-center align-items-center" t-attf-style="background-color: {{header}}; height: 30px;">
+                <span t-attf-style="color: {{color}}; text-overflow: ellipsis; -webkit-line-clamp: 1; display: -webkit-box; -webkit-box-orient: vertical;" t-att-title="header_content">
+                    <t t-esc="header_content" />
+                </span>
+            </div>
+            <span class="w-100 text-left ps-2 fw-bold" t-attf-style="color: {{color}}" t-if="body" t-esc="body" t-att-title="body"/>
+            <div class="d-flex flex-column justify-content-center align-items-start pl-2 pr-2 w-100" t-attf-style="background-color: {{footer}}; border-color: {{footer}} ;height: 30px;">
+                <span t-if="footer_content" t-att-title="footer_content" class="w-100 text-center" t-attf-style="color: {{color}}; text-overflow: ellipsis; -webkit-line-clamp: 1; display: -webkit-box; -webkit-box-orient: vertical;">
+                    <t t-esc="footer_content"/>
+                </span>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="hmv_analytic_hierachy.HierachyView" owl="1">
+        <div id="analytic_hierachy_view" />
+    </t>
+
+    <t t-name="hmv_analytic_hierachy.HierachyViewForm" owl="1">
+        <div id="analytic_hierachy_form_view"/>
+    </t>
+
+</templates>
