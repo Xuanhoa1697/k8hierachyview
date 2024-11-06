@@ -12,7 +12,7 @@
         Multi Lever
     """,
     'category': 'K8 Hierachy',
-    'version': '17.1',
+    'version': '18.1',
     'license': 'LGPL-3',
     'author': 'K8 Team',
     # 'website': 'https://on.net.vn',
