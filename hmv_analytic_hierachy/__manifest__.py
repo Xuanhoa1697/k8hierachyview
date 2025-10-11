@@ -27,7 +27,7 @@
         ]
     },
     'license': 'LGPL-3',
-    'price': 170,
+    'price': 50,
     'currency': 'EUR',
     'images': [
         'static/description/main.jpg'
