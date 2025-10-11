@@ -14,7 +14,7 @@
     'category': 'K8 Hierachy',
     'version': '17.1',
     'license': 'LGPL-3',
-    'author': 'K8 Team',
+    'author': 'Cloud Open Technologies/K8 Team',
     'website': 'https://on.net.vn',
     'depends': ['base', 'mail', 'web'],
     'data': [
